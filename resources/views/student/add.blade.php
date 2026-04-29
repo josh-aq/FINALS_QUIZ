@@ -5,7 +5,7 @@
               <div class="card-header">
                 <h3 class="card-title">add student</h3>
               </div>
-        <form  action="{{ route('student.store') }}" method="POST"
+        <form  action= "{{ route('student.store') }}"
 
 
                       @csrf
