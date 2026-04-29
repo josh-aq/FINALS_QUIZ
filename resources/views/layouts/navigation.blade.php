@@ -28,17 +28,17 @@
                     </p>
                 </a>
             </li>
-                        <li class="nav-item">
-                <a href="{{Route('student.index')}}" class="nav-link">
+            <li class="nav-item">
+                <a href="{{ route('student.index') }}" class="nav-link">
                     <i class="nav-icon fas fa-users"></i>
                     <p>
                         {{ __('Student management') }}
                     </p>
                 </a>
             </li>
-                                    <li class="nav-item">
-                <a href="{{Route('student.add')}}" class="nav-link">
-                    <i class="nav-icon fas fa-users"></i>
+            <li class="nav-item">
+                <a href="{{ route('student.add') }}" class="nav-link">
+                    <i class="nav-icon fas fa-user-plus"></i>
                     <p>
                         {{ __('Add Student') }}
                     </p>

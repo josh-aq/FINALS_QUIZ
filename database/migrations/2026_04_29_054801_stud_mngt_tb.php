@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('midname');
             $table->string('address');
             $table->integer('dob');
-            $table->timestamps();
         });
     }
 

@@ -3,48 +3,56 @@
 @section('content')
 <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Form</h3>
+                <h3 class="card-title">add student</h3>
               </div>
-              <form role="form">
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Name</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter name">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Address</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Address">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Birthday</label>
-                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="dd/mm/yyyy">
-                  </div>
+        <form  action="{{ route('student.store') }}" method="POST"
 
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-5">
-                    <label for="exampleInputPassword1">  Weight</label>
-                    <input type="text" class="form-control" placeholder="Weight">
-                  </div>
-                  <div class="col-md-5">
-                    <label for="exampleInputPassword1">  Height</label>
-                    <input type="text" class="form-control" placeholder="Height">
-                  </div>
+
+                      @csrf
+
+                        <div class="form-group col-12">
+                          <label for="exampleInputPassword1">Last Name</label>
+                          <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter your Last Name">
+                        </div>
+                          @error('lname') <span class="text-danger">{{$message}}</span> @enderror
+
+                       <div class="row card-body col-12">
+                         <div class="form-group col-12">
+                            <label
+                               for="exampleInputEmail1">First Name
+                            </label>
+                               <input type="text" class="form-control g-2" id="fname" name="fname" placeholder="Enter your Firstname" require>
+                         </div>
+                          @error('fname') <span class="text-danger">{{$message}}</span> @enderror
+
+                        <div class="form-group col-12">
+                           <label for="exampleInputFile">Middle Name</label>
+
+                          <input type="text" class="form-control" id="midname" name="midname" placeholder="Enter your Middle Name">
+                        </div>
+                          @error('midname') <span class="text-danger">{{$message}}</span> @enderror
+
+
+                        <div class="form-group col-12">
+                          <label for="exampleInputEmail1">Address</label>
+                          <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
+                        </div>
+                          @error('address') <span class="text-danger">{{$message}}</span> @enderror
+
+
+
+                        <div class="form-group col-6">
+                          <label for="exampleInputPassword1">DATE OF BIRTH</label>
+                          <input type="date" class="form-control" id="dob" name="dob" placeholder="dd/mm/yyyy">
+                        </div>
+
 
                 </div>
-              </div>
-              <!-- /.card-body -->
-            </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Blood type</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Blood type">
-                  </div>
                 <!-- /.card-body -->
 
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                  <button type="cancel" class="btn btn-default">Cancel</button>
+                <div class="card-footer ">
+                  <button type="submit" class="btn btn-success col-12">Submit</button>
                 </div>
-              </form>
+                </form>
 @endsection
 
